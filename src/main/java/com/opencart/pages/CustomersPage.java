@@ -12,6 +12,9 @@ public class CustomersPage extends BasePage {
     private final By customersHeading =
             By.xpath("//h1[contains(normalize-space(), 'Customers')]");
 
+    private final By addCustomerButton =
+            By.xpath("//a[contains(@href, 'route=customer/customer/add')]");
+
     public CustomersPage() {
         super();
     }
@@ -27,5 +30,9 @@ public class CustomersPage extends BasePage {
 
     public boolean isCustomersPageDisplayed() {
         return isPageLoaded();
+    }
+
+    public boolean isAddCustomerButtonDisplayed() {
+        return isElementVisible(addCustomerButton);
     }
 }

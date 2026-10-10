@@ -22,4 +22,19 @@ public class CustomersUITest extends BaseTest {
                 "Customers page is not displayed"
         );
     }
+
+    @Test
+    public void TC_CUST_UI_002() {
+
+        LoginPage loginPage = new LoginPage();
+        loginPage.login();
+
+        CustomersPage customersPage = new CustomersPage();
+        customersPage.openCustomersPage();
+
+        Assert.assertTrue(
+                customersPage.isAddCustomerButtonDisplayed(),
+                "Add Customer button is not displayed"
+        );
+    }
 }
