@@ -18,6 +18,9 @@ public class CustomersPage extends BasePage {
     private final By customerNameFilter =
             By.name("filter_name");
 
+    private final By customerEmailFilter =
+            By.name("filter_email");
+
     public CustomersPage() {
         super();
     }
@@ -41,5 +44,9 @@ public class CustomersPage extends BasePage {
 
     public boolean isCustomerNameFilterDisplayed() {
         return isElementVisible(customerNameFilter);
+    }
+
+    public boolean isCustomerEmailFilterDisplayed() {
+        return isElementVisible(customerEmailFilter);
     }
 }

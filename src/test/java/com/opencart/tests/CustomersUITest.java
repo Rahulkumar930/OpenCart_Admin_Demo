@@ -37,4 +37,34 @@ public class CustomersUITest extends BaseTest {
                 "Add Customer button is not displayed"
         );
     }
+
+    @Test
+    public void TC_CUST_UI_003() {
+
+        LoginPage loginPage = new LoginPage();
+        loginPage.login();
+
+        CustomersPage customersPage = new CustomersPage();
+        customersPage.openCustomersPage();
+
+        Assert.assertTrue(
+                customersPage.isCustomerNameFilterDisplayed(),
+                "Customer Name filter field is not displayed"
+        );
+    }
+
+    @Test
+    public void TC_CUST_UI_004() {
+
+        LoginPage loginPage = new LoginPage();
+        loginPage.login();
+
+        CustomersPage customersPage = new CustomersPage();
+        customersPage.openCustomersPage();
+
+        Assert.assertTrue(
+                customersPage.isCustomerEmailFilterDisplayed(),
+                "Customer E-Mail filter field is not displayed"
+        );
+    }
 }
