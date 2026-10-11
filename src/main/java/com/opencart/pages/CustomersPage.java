@@ -15,6 +15,9 @@ public class CustomersPage extends BasePage {
     private final By addCustomerButton =
             By.xpath("//a[contains(@href, 'route=customer/customer/add')]");
 
+    private final By customerNameFilter =
+            By.name("filter_name");
+
     public CustomersPage() {
         super();
     }
@@ -34,5 +37,9 @@ public class CustomersPage extends BasePage {
 
     public boolean isAddCustomerButtonDisplayed() {
         return isElementVisible(addCustomerButton);
+    }
+
+    public boolean isCustomerNameFilterDisplayed() {
+        return isElementVisible(customerNameFilter);
     }
 }
